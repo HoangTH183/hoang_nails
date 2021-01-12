@@ -1,0 +1,46 @@
+.detail__customer-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #43a047;
+  height: 65px;
+  color: #fff;
+}
+
+.mat-dialog-container {
+  padding: 0;
+}
+
+.detail__customer {
+  width: 700px;
+  display: table-cell;
+  height: 650px;
+  padding: 0 !important;
+}
+
+.customer-content__item {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.detail__customer-content {
+  margin-left: 25px;
+}
+
+.detail__customer-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.customer-content__text {
+  font-weight: 500;
+}
+
+.item__2-button {
+  color: #fff;
+}
+
+.technician {
+  margin-right: 10px;
+}

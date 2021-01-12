@@ -1,0 +1,33 @@
+<page-header class="bg-green-600"></page-header>
+
+<section>
+    <mat-card>
+        <form [formGroup]="customerGroupForm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex p-0 p-l-16">
+                        <div class="col-md-6">
+                            <mat-form-field class="w-full">
+                                <mat-label>Group Name</mat-label>
+                                <input matInput placeholder="Group Name" type="text" formControlName="groupname" required>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6 d-flex p-t-24">
+                            <mat-label class="col-md-3 p-0 text-left">Active Status</mat-label>
+                            <mat-slide-toggle class="pl-4 col-md-9"></mat-slide-toggle>
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-l-16 m-t-48">
+                        <a href="javascript:;" class="btn btn-primary m-r-16 col-md-1" color="primary" mat-raised-button matTooltip="Save & Continue">
+                            <span>Save</span>
+                        </a>
+                        <a [routerLink]="['/customer/group-manager']" class="btn btn-secondary m-r-16 col-md-1" mat-raised-button matTooltip="Back to the list">
+                            <span>Cancel</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-card>
+</section>

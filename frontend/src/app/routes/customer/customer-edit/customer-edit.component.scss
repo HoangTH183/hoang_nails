@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1366px) {
+    .col-md-1 {
+        margin-right: 24px !important;
+    }
+    .col-md-11 {
+        padding-right: 24px !important;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .col-md-1 {
+        margin-right: 43px !important;
+    }
+    .col-md-11 {
+        padding-right: 43px !important;
+    }
+}

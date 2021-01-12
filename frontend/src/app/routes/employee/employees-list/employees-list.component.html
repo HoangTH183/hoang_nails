@@ -1,0 +1,79 @@
+<page-header class="bg-green-600"></page-header>
+
+<div class="col-md-12 d-flex">
+  <div class="col-md-6 m-t-4">
+      <a [routerLink]="['/employee-create']" class="btn btn-primary w-40" color="primary" mat-raised-button matTooltip="Add New">
+          <span>New Employee</span>
+      </a>
+  </div>
+  <div class="col-md-6">
+      <mat-form-field>
+          <mat-label>Search</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Employee" #input>
+          <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+  </div>
+</div>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th class="employee__manager-title-id" mat-header-cell *matHeaderCellDef>ID</th>
+      <td class="employee__manager-content-id" mat-cell *matCellDef="let element">
+        {{ element.id }}
+      </td>
+    </ng-container>
+
+    <!-- Employee Name Column -->
+    <ng-container matColumnDef="employeename">
+      <th class="employee__manager-title-name" mat-header-cell *matHeaderCellDef>Employee Name</th>
+      <td class="employee__manager-content-name-role" mat-cell *matCellDef="let element">
+        {{ element.employeename }}
+      </td>
+    </ng-container>
+
+    <!-- Role Column -->
+    <ng-container matColumnDef="role">
+      <th class="employee__manager-title-role" mat-header-cell *matHeaderCellDef>Role</th>
+      <td class="employee__manager-content-role" mat-cell *matCellDef="let element">
+        {{ element.role }}
+      </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th class="employee__manager-title-status" mat-header-cell *matHeaderCellDef>Status</th>
+      <td class="employee__manager-content-status" mat-cell *matCellDef="let element">
+        <mat-slide-toggle color="primary"></mat-slide-toggle>
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="create">
+      <th class="employee__manager-title-cre" mat-header-cell *matHeaderCellDef>Created at</th>
+      <td class="employee__manager-content-cre" mat-cell *matCellDef="let element">
+        {{ element.create }}
+      </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="actions">
+      <th class="employee__manager-title-action" mat-header-cell *matHeaderCellDef>Actions</th>
+      <td class="employee__manager-content-action" mat-cell *matCellDef="let element">
+        <a routerLink="/employee-edit/">
+          <mat-icon class="em__btn-edit" matTooltip="Edit">edit</mat-icon>
+      </a>
+        <mat-icon class="em__btn-del">delete_forever</mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{ input.value }}"</td>
+    </tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

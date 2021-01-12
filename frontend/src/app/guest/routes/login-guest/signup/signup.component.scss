@@ -1,0 +1,33 @@
+.example-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: #fff;
+}
+
+.guest-header__title {
+  font-size: 50px;
+  color: rgb(214, 92, 35);
+}
+
+.signup__guest-header {
+  text-align: -webkit-center;
+}
+
+.sigup__guest-content {
+  text-align: -webkit-center;
+}
+
+.guest__actions {
+  display: flex;
+  justify-content: center;
+}
+.guest__actions-button {
+  margin: 20px;
+}
+.guest__signup-submit {
+  text-align: -webkit-center;
+}
+.signup-submit__btn {
+  width:50%;
+}

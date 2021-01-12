@@ -1,0 +1,68 @@
+<page-header class="bg-green-600"></page-header>
+<div class="col-md-12 d-flex">
+    <div class="col-md-3 m-t-4">
+        <a (click)="appointmentDialog()" class="btn btn-primary w-80" color="primary" mat-raised-button matTooltip="Add New">
+            <span>Add Appointment</span>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <mat-form-field class="w-full">
+            <mat-label>Search</mat-label>
+            <input placeholder="2021-01-01" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+</div>
+<div class="col-md-12 d-flex">
+    <div class="col-md-2 d-flex">
+        <mat-icon class="icon__purple">stop</mat-icon>
+        <p class="h-40 m-t-4 m-0">Requested</p>
+    </div>
+    <div class="col-md-2 d-flex">
+        <mat-icon class="icon__blue">stop</mat-icon>
+        <p class="h-40 m-t-4 m-0">Pending</p>
+    </div>
+    <div class="col-md-2 d-flex">
+        <mat-icon class="icon__green">stop</mat-icon>
+        <p class="h-40 m-t-4 m-0">Confirmed</p>
+    </div>
+    <div class="col-md-2 d-flex">
+        <mat-icon class="icon__red">stop</mat-icon>
+        <p class="h-40 m-t-4 m-0">No show</p>
+    </div>
+    <div class="col-md-1 d-flex">
+        <mat-icon class="icon__yellow">stop</mat-icon>
+        <p class="h-40 m-t-4 m-0">Done</p>
+    </div>
+</div>
+<div class="col-md-12 m-t-16">
+    <mat-grid-list cols="6" rowHeight="1:0.75" gutterSize="2px">
+        <mat-grid-tile class="bg-gray-500"></mat-grid-tile>
+        <mat-grid-tile class="bg-gray-500 col-md-12 d-block">
+            <mat-grid-tile-header class="tile__header bg-gray-500"><img class="r-full w-50" src="../../../assets/images/avatars/avatar-1.jpg"></mat-grid-tile-header>
+            <p class="tile__content">Employee 1</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="bg-gray-500 col-md-12 d-block">
+            <mat-grid-tile-header class="tile__header bg-gray-500"><img class="r-full w-50" src="../../../assets/images/avatars/avatar-2.jpg"></mat-grid-tile-header>
+            <p class="tile__content">Employee 2</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="bg-gray-500 col-md-12 d-block">
+            <mat-grid-tile-header class="tile__header bg-gray-500"><img class="r-full w-50" src="../../../assets/images/avatars/avatar-3.jpg"></mat-grid-tile-header>
+            <p class="tile__content">Employee 3</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="bg-gray-500 col-md-12 d-block">
+            <mat-grid-tile-header class="tile__header bg-gray-500"><img class="r-full w-50" src="../../../assets/images/avatars/avatar-4.jpg"></mat-grid-tile-header>
+            <p class="tile__content">Employee 4</p>
+        </mat-grid-tile>
+        <mat-grid-tile class="bg-gray-500 col-md-12 d-block">
+            <mat-grid-tile-header class="tile__header bg-gray-500"><img class="r-full w-50" src="../../../assets/images/avatars/avatar-5.jpg"></mat-grid-tile-header>
+            <p class="tile__content">Employee 5</p>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="6" rowHeight="1:0.25" gutterSize="2px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.color]="tile.color" [style.background]="tile.background">
+            {{tile.text}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

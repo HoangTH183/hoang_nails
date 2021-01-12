@@ -1,0 +1,44 @@
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.id__th,
+.id__td,
+.action__th,
+.action__td,
+.create__th,
+.create__td,
+.status__th,
+.status__td {
+    width: 10%;
+    color: #000;
+}
+
+.name__th,
+.name__td {
+    width: 60%;
+    color: #000;
+}
+
+.icon__edit {
+    color: #ffb701;
+    font-size: 20px;
+}
+
+.icon__delete {
+    color: red;
+    font-size: 20px;
+}
+
+.div__search {
+    width: 100%;
+    border: 1px solid #a4a4a4;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 24px;
+}

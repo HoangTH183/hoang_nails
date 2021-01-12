@@ -1,0 +1,143 @@
+.example-card {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #fff;
+}
+
+.signin__guest-search {
+    border: 1px solid black;
+    border-radius: 105px;
+    width: 350px;
+    height: 50px;
+    margin: 50px 0;
+}
+
+.signin__guest-header {
+    text-align: -webkit-center;
+}
+
+.guest-header__title {
+    font-size: 50px;
+    color: rgb(214, 92, 35);
+}
+
+.example-container {
+    height: 400px;
+    width: 550px;
+    max-width: 100%;
+    overflow: auto;
+}
+
+table {
+    width: 800px;
+}
+
+td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+}
+
+th.mat-column-position,
+td.mat-column-position {
+    padding-left: 8px;
+}
+
+.mat-table {
+    border: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky:first-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.mat-table-sticky:last-child {
+    border-left: 1px solid #e0e0e0;
+}
+
+.signin__guest-table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.guest-table__title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #111;
+}
+
+.guest__create {
+    text-align: -webkit-center;
+}
+
+.guest__create-signin {
+    width: 800px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.guest__create-icon {
+    padding-right: 15px;
+    margin-bottom: 3px;
+    color: yellow;
+}
+
+.guest__actions {
+    display: flex;
+    justify-content: center;
+}
+
+.guest__actions-button {
+    margin: 20px;
+}
+
+// css tim kiem
+.box {
+    margin: 20px auto;
+    width: 300px;
+    height: 50px;
+}
+
+.container-1 {
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container-1 input#search {
+    width: 300px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #111;
+    font-size: 10pt;
+    float: left;
+    color: #111;
+    padding-left: 45px;
+    // -webkit-border-radius: 5px;
+    // -moz-border-radius: 5px;
+    // border-radius: 35px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+
+.container-1 input#search:-moz-placeholder {
+    /* Firefox 18- */
+    color: #65737e;
+}
+
+.container-1 input#search::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #65737e;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+    color: #65737e;
+}
+
+.signinup__button {
+    float: right;
+}

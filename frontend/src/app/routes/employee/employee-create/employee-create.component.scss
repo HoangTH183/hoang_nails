@@ -1,0 +1,33 @@
+.employee__btn {
+  width: 100px !important;
+}
+.rounded-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50% ;
+}
+.employee__avatar {
+  display: flex;
+}
+.employee__avatar-label {
+  padding-top: 15px;
+}
+.employee__avatar-button {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.employee__avartar-chosse {
+  margin-top: 20px;
+  color: #fff;
+  background-color: #3f51b5;
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}

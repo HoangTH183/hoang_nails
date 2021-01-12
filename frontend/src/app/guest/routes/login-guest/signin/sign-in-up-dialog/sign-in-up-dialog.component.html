@@ -1,0 +1,25 @@
+<div class="signinup__dialog">
+    <div class="signinup__title" mat-dialog-title>Sign-in/Sign-out</div>
+    <form [formGroup]="signForm" class="example-form" (ngSubmit)="onSubmit()">
+        <div mat-dialog-content class="signinup__dialog-content">
+            <mat-form-field class="w-full p-t-16">
+                <mat-label>Username</mat-label>
+                <input type="username" matInput formControlName="username" placeholder="Ex. Username">
+                <mat-error>
+                    Please enter a valid Username
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-full p-t-48">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" placeholder="Ex. Password">
+                <mat-error>
+                    Please enter a valid Password
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="signinup__button">
+            <button mat-raised-button class="m-r-4" color="primary">Submit</button>
+            <button mat-raised-button mat-dialog-close>Cancel</button>
+        </div>
+    </form>
+</div>

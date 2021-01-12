@@ -1,0 +1,38 @@
+<mat-dialog-content class="discount__ticket">
+  <mat-card class="discount__ticket-header">
+    <h3 mat-dialog-title>Add Discounts</h3>
+    <button mat-icon-button mat-dialog-close><mat-icon>highlight_off</mat-icon></button>
+  </mat-card>
+  <div class="discount__ticket-content">
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1" class="ticket-content__button-2">Ticket Discount</mat-radio-button>
+      <mat-radio-button value="2" class="ticket-content__button-1">Service Discount</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="discount__ticket-item">
+    <div>
+      <h4>Select Technical    </h4>
+      <mat-form-field appearance="fill" class="ticket-item__form">
+        <mat-label>Select Technical</mat-label>
+        <mat-select [formControl]="animalControl" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let animal of animals" [value]="animal">
+            {{ animal.name }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
+        <mat-hint>{{ animalControl.value?.sound }}</mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Discount Price</h4>
+      <div class="form-group">
+        <input type="text" class="ticket-item__input" />
+      </div>
+    </div>
+  </div>
+  <div class="discount-ticket__actions">
+    <button mat-raised-button color="primary">Save</button>
+    <button mat-raised-button mat-dialog-close >Close</button>
+  </div>
+</mat-dialog-content>

@@ -1,0 +1,128 @@
+<page-header class="bg-green-600"></page-header>
+<div class="col-md-12 processw">
+  <div class="col-md-9 processw__header">
+      <div class="processw__header-title">
+
+          <button mat-raised-button color="primary" (click)="openDialog()">Staff Sign in/Sign out</button>
+      </div>
+      <div class="processw__header-content">
+          <mat-card class="col-md-3 header-content__item">
+              <div class="content__item-1">
+                  <div class="col-md-3">
+                      <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                  </div>
+                  <div class="col-md-9">Employee Name 1</div>
+              </div>
+              <div class="content__item-2">
+                  <div>turn: 3</div>
+                  <div>$ 0</div>
+              </div>
+          </mat-card>
+          <mat-card class="col-md-3 header-content__item">
+              <div class="content__item-1">
+                  <div class="col-md-3">
+                      <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                  </div>
+                  <div class="col-md-9">Employee Name 1</div>
+              </div>
+              <div class="content__item-2">
+                  <div>turn: 3</div>
+                  <div>$ 0</div>
+              </div>
+          </mat-card>
+          <mat-card class="col-md-3 header-content__item">
+              <div class="content__item-1">
+                  <div class="col-md-3">
+                      <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                  </div>
+                  <div class="col-md-9">Employee Name 1</div>
+              </div>
+              <div class="content__item-2">
+                  <div>turn: 3</div>
+                  <div>$ 0</div>
+              </div>
+          </mat-card>
+      </div>
+  </div>
+  <div class="col-md-3">
+      <mat-tab-group class="processw__header-tab">
+          <mat-tab label="Waiting">
+              <div class="box">
+                  <div class="container-1">
+                      <input type="search" id="search" placeholder="Search..." />
+                  </div>
+              </div>
+              <button class="header-tab__button" mat-raised-button color="primary">
+    <mat-icon>group_add</mat-icon> Create new customer
+  </button>
+              <div class="header-tab__card">
+                  <mat-card class="col-md-12 tab__card-item">
+                      <div class="card-item__1">
+                          <div class="col-md-3">
+                              <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                          </div>
+                          <div class="col-md-9 item__1-title">
+                              <div>
+                                  <label>Nguyen A</label>
+                                  <p>text</p>
+                              </div>
+                              <div>
+                                  09:41
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-item__2">
+                          <button class="item__2-button col-md-3 bg-purple-500" mat-raised-button (click)="openDetailCustomer()">Detail</button>
+                          <button class="item__2-button col-md-3 bg-green-500" mat-raised-button>Q. Print</button>
+                          <button class="item__2-button col-md-3" mat-raised-button color="primary">To service</button>
+                      </div>
+                  </mat-card>
+                  <mat-card class="col-md-12 tab__card-item">
+                    <div class="card-item__1">
+                        <div class="col-md-3">
+                            <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                        </div>
+                        <div class="col-md-9 item__1-title">
+                            <div>
+                                <label>Nguyen A</label>
+                                <p>text</p>
+                            </div>
+                            <div>
+                                09:41
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item__2">
+                        <button class="item__2-button col-md-3 bg-purple-500" mat-raised-button>Detail</button>
+                        <button class="item__2-button col-md-3 bg-green-500" mat-raised-button>Q. Print</button>
+                        <button class="item__2-button col-md-3" mat-raised-button color="primary">To service</button>
+                    </div>
+                </mat-card>
+                <mat-card class="col-md-12 tab__card-item">
+                  <div class="card-item__1">
+                      <div class="col-md-3">
+                          <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+                      </div>
+                      <div class="col-md-9 item__1-title">
+                          <div>
+                              <label>Nguyen A</label>
+                              <p>text</p>
+                          </div>
+                          <div>
+                              09:41
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-item__2">
+                      <button class="item__2-button col-md-3 bg-purple-500" mat-raised-button>Detail</button>
+                      <button class="item__2-button col-md-3 bg-green-500" mat-raised-button>Q. Print</button>
+                      <button class="item__2-button col-md-3" mat-raised-button color="primary">To service</button>
+                  </div>
+              </mat-card>
+
+              </div>
+          </mat-tab>
+          <mat-tab label="Second"> Content 2 </mat-tab>
+      </mat-tab-group>
+  </div>
+</div>

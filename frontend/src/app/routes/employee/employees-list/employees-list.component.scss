@@ -1,0 +1,77 @@
+/* Structure */
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.employee__manager-title-id,
+.employee__manager-content-id {
+  width: 10%;
+}
+
+.employee__manager-title-name,
+.employee__manager-content-name {
+  width: 40%;
+}
+
+.employee__manager-title-role,
+.employee__manager-content-role {
+  width: 15%;
+  text-align: center;
+}
+
+.employee__manager-title-status,
+.employee__manager-content-status {
+  width: 10%;
+  text-align: center;
+}
+
+.employee__manager-title-cre,
+.employee__manager-content-cre {
+  width: 15%;
+  text-align: center;
+}
+
+.employee__manager-title-action,
+.employee__manager-content-action {
+  width: 10%;
+  text-align: center;
+}
+
+.employee__manager-title-id,
+.employee__manager-title-name,
+.employee__manager-title-role,
+.employee__manager-title-status,
+.employee__manager-title-cre,
+.employee__manager-title-action {
+  font-size: 24px;
+  color: #111;
+  font-weight: 500;
+}
+
+.employee__manager-content-status,
+.employee__manager-content-role,
+.employee__manager-content-name,
+.employee__manager-content-id,
+.employee__manager-content-cre,
+.employee__manager-content-action {
+  font-size: 18px;
+}
+
+.em__btn-edit {
+  color: #ffa936;
+  padding-right: 10px;
+}
+
+.em__btn-del {
+  color: #ff5e57;
+  padding-left: 10px;
+}
+
+.Search__employee {
+  font-size: 18px;
+}

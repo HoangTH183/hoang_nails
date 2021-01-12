@@ -1,0 +1,174 @@
+<page-header class="bg-green-600"></page-header>
+<div class="col-md-12 clientcheckout">
+  <div class="col-md-9 clientcheckout__header">
+    <div class="clientcheckout__header-title">
+      <button mat-raised-button color="primary">
+        <mat-icon>group_add</mat-icon> Add technical
+      </button>
+    </div>
+    <div class="clientcheckout__header-content">
+      <mat-card class="col-md-3 header-content__item">
+        <div class="content__item-1">
+          <div class="col-md-3">
+            <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+          </div>
+          <div class="col-md-9">Employee Name 1</div>
+        </div>
+        <div class="content__item-2">
+          <button mat-raised-button color="primary">Release</button>
+        </div>
+      </mat-card>
+      <mat-card class="col-md-3 header-content__item">
+        <div class="content__item-1">
+          <div class="col-md-3">
+            <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+          </div>
+          <div class="col-md-9">Employee Name 1</div>
+        </div>
+        <div class="content__item-2">
+          <button mat-raised-button color="primary">Release</button>
+        </div>
+      </mat-card>
+      <mat-card class="col-md-3 header-content__item">
+        <div class="content__item-1">
+          <div class="col-md-3">
+            <img src="../../../../../assets/images/avatar.png" class="content__item-img" />
+          </div>
+          <div class="col-md-9">Employee Name 1</div>
+        </div>
+        <div class="content__item-2">
+          <button mat-raised-button color="primary">Release</button>
+        </div>
+      </mat-card>
+    </div>
+    <div>
+      <mat-tab-group>
+        <mat-tab label="Service">
+          <mat-tab-group backgroundColor="primary">
+            <mat-tab label="Service Group 1" class="clientcheckout__content">
+              <div class="d-flex">
+                <mat-card class="col-md-3 clientcheckout__content-item">
+                  <div>Service 1</div>
+                  <div>price : 10$</div>
+                </mat-card>
+                <mat-card class="col-md-3 clientcheckout__content-item">
+                  <div>Service 1</div>
+                  <div>price : 10$</div>
+                </mat-card>
+                <mat-card class="col-md-3 clientcheckout__content-item">
+                  <div>Service 1</div>
+                  <div>price : 10$</div>
+                </mat-card>
+              </div>
+            </mat-tab>
+            <mat-tab label="Service Group 2"> Content 2 </mat-tab>
+            <mat-tab label="Service Group 3"> Content 3 </mat-tab>
+            <mat-tab label="Service Group 4"> Content 4 </mat-tab>
+          </mat-tab-group>
+        </mat-tab>
+        <mat-tab label="Product"> Product </mat-tab>\
+      </mat-tab-group>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <mat-card class="clientcheckout__card h-full">
+      <mat-card-header class="clientcheckout__card-header">
+        <div class="clientcheckout__card-title">Ticket: 8686868686</div>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="clientcheckout__card-content col-md-12">
+          <div class="card-content">
+            <button class="card-content__button col-md-5" mat-raised-button color="primary">
+              Print invoice
+            </button>
+            <button class="card-content__button col-md-5" mat-raised-button color="primary">
+              Show invoice
+            </button>
+          </div>
+          <div class="card-content">
+            <button class="card-content__button col-md-5" mat-raised-button color="primary" (click)="openDiscount() ">
+              Add discount
+            </button>
+            <button class="card-content__button col-md-5" mat-raised-button color="primary">
+              Add tip
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="example-container mat-elevation-z8">
+            <table>
+              <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th >Disc</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td colspan="5">Employee 1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Service 1</td>
+                <td>10$</td>
+                <td>1$</td>
+                <td class="button-btn__delete">
+                  <button mat-icon-button color="warn" >
+                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5">Employee 2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Service 2</td>
+                <td>10$</td>
+                <td>1$</td>
+                <td class="button-btn__delete">
+                  <button mat-icon-button color="warn" >
+                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Service 3</td>
+                <td>10$</td>
+                <td>1$</td>
+                <td class="button-btn__delete">
+                  <button mat-icon-button color="warn" >
+                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="clientcheckout__card-sub">
+            <div class="card-sub__content">
+              <div>Subtotal :</div>
+              <div>30$</div>
+            </div>
+            <div class="card-sub__content">
+              <div>Ticket discount :</div>
+              <div>1$</div>
+            </div>
+            <div class="card-sub__content">
+              <div>Subtotal :</div>
+              <div>29$</div>
+            </div>
+          </div>
+          <div>
+            <textarea id="w3review" name="w3review" rows="6" cols="48"></textarea>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="clientcheckout__action-button m-b-16">
+          <button mat-raised-button color="primary">Check Out</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

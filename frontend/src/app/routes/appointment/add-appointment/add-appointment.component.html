@@ -1,0 +1,172 @@
+<div class="appointment__title" mat-dialog-title>Add Appointment</div>
+<form [formGroup]="addappointmentForm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex p-0">
+                <div class="col-md-3">
+                    <div class="col-md-12 p-0">
+                        <div class="col-md-12">
+                            <mat-form-field class="w-full">
+                                <mat-label>Customer</mat-label>
+                                <input matInput placeholder="Ex. Phone" #input>
+                                <mat-icon matSuffix>search</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 p-t-16">
+                            <table mat-table class="col-md-12 w-full" [dataSource]="dataSource">
+                                <ng-container matColumnDef="label" sticky>
+                                    <!-- <td mat-header-cell *matHeaderCellDef>Label</td> -->
+                                    <td mat-cell *matCellDef="let element" class="p-0">{{ element.label }}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="data" sticky>
+                                    <!-- <td mat-header-cell *matHeaderCellDef>Data</td> -->
+                                    <td mat-cell *matCellDef="let element" class="p-l-16">{{ element.data }}</td>
+                                </ng-container>
+                                <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>First reminder</mat-label>
+                                <mat-select formControlName="days" required>
+                                    <mat-option *ngFor="let day of days" [value]="day.name">
+                                        {{day.name}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>Second reminder</mat-label>
+                                <mat-select formControlName="hours" required>
+                                    <mat-option *ngFor="let hour of hours" [value]="hour.name">
+                                        {{hour.name}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16 d-flex">
+                            <div class="col-md-6 p-l-0">
+                                <button mat-raised-button class="col-md-12 p-0 bg-purple-200" selected="true">Requested</button>
+                            </div>
+                            <div class="col-md-6 p-r-0">
+                                <button mat-raised-button class="col-md-12 p-0 bg-blue-200" selected="true">Pending</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 m-t-16 d-flex">
+                            <div class="col-md-4 p-l-0"><button mat-raised-button class="col-md-12 p-0 bg-green-200" selected="true">Confirm</button></div>
+                            <div class="col-md-4 p-l-0 p-r-0"><button mat-raised-button class="col-md-12 p-0 bg-red-400" selected="true">No show</button></div>
+                            <div class="col-md-4 p-r-0"><button mat-raised-button class="col-md-12 p-0 bg-yellow-200" selected="true">Done</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12 p-0">
+                        <div class="col-md-12">
+                            <mat-form-field class="w-full">
+                                <mat-label>Select service categories</mat-label>
+                                <input matInput [matAutocomplete]="autocomplete" [(ngModel)]="value" (ngModelChange)="Servicecategory = filter(value)" #input required formControlName="servicecategory">
+                                <mat-autocomplete #autocomplete="matAutocomplete">
+                                    <mat-option *ngFor="let pf of servicecategory" [value]="pf.name">
+                                        <span>{{ pf.name }}</span>
+                                    </mat-option>
+                                </mat-autocomplete>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12 p-0">
+                        <div class="col-md-12 p-0">
+                            <table mat-table class="col-md-12 w-full" [dataSource]="dataListSource">
+                                <ng-container matColumnDef="no" sticky>
+                                    <td mat-header-cell *matHeaderCellDef class="text-center">No.</td>
+                                    <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.no }}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="name" sticky>
+                                    <td mat-header-cell *matHeaderCellDef class="text-center">Name</td>
+                                    <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.name }}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="price" sticky>
+                                    <td mat-header-cell *matHeaderCellDef class="text-center">Price</td>
+                                    <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.price }}</td>
+                                </ng-container>
+                                <ng-container matColumnDef="disc" sticky>
+                                    <td mat-header-cell *matHeaderCellDef class="text-center">Disc.</td>
+                                    <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.disc }}</td>
+                                </ng-container>
+                                <tr mat-header-row *matHeaderRowDef="displayedListColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedListColumns"></tr>
+                            </table>
+                        </div>
+                        <div class="col-md-12 d-flex bg-gray-400">
+                            <div class="col-md-8">
+                                <p>Subtotal</p>
+                                <p>Ticket discount</p>
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p>200$</p>
+                                <p>40$</p>
+                                <p>160$</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="col-md-12 p-0">
+                        <div class="col-md-12">
+                            <mat-form-field class="w-full">
+                                <mat-label>Select Employee</mat-label>
+                                <mat-select multiple formControlName="employees" required>
+                                    <mat-option *ngFor="let employee of employees" [value]="employee.name">
+                                        {{employee.name}}
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>Date</mat-label>
+                                <input matInput type="date" formControlName="date" required>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>Start time</mat-label>
+                                <input matInput type="time" formControlName="start_time" required>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>End time</mat-label>
+                                <input matInput type="time" formControlName="end_time" required>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12 m-t-16">
+                            <mat-form-field class="w-full">
+                                <mat-label>Note</mat-label>
+                                <textarea formControlName="note" matInput placeholder="Note" cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="5" #autosize="cdkTextareaAutosize" required></textarea>
+                                <mat-error>This field is required</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 m-t-24">
+                <div class="appointment__button">
+                    <button mat-raised-button class="m-r-16" color="primary">Save</button>
+                    <button mat-raised-button mat-dialog-close>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
