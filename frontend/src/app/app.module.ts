@@ -1,3 +1,4 @@
+import { ServiceScreenDialogComponent } from './guest/routes/login-guest/service-screen/service-screen-dialog/service-screen-dialog.component';
 import { SignupComponent } from './guest/routes/login-guest/signup/signup.component';
 import { SigninComponent } from './guest/routes/login-guest/signin/signin.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,10 +28,13 @@ import { SignupDialogComponent } from './guest/routes/login-guest/signup/signup-
 import { SignInUpDialogComponent } from './guest/routes/login-guest/signin/sign-in-up-dialog/sign-in-up-dialog.component';
 import { ClientCheckoutComponent } from './routes/mainscreen/client-checkout/client-checkout.component';
 import { DiscountTicketComponent } from './routes/mainscreen/client-checkout/discount-ticket/discount-ticket.component';
+import { AddTipComponent } from './routes/mainscreen/add-tip/add-tip.component';
+import { AddDiscountComponent } from './routes/mainscreen/add-discount/add-discount.component';
+import { ServiceScreenComponent } from './guest/routes/login-guest/service-screen/service-screen.component';
 
 @NgModule({
-  declarations: [AppComponent , SigninComponent ,SignupComponent, SignupDialogComponent, SignInUpDialogComponent, DiscountTicketComponent],
-  entryComponents: [SignupDialogComponent, SignInUpDialogComponent],
+  declarations: [AppComponent , SigninComponent ,SignupComponent, SignupDialogComponent, SignInUpDialogComponent, DiscountTicketComponent, AddTipComponent, AddDiscountComponent, ServiceScreenComponent, ServiceScreenDialogComponent],
+  entryComponents: [SignupDialogComponent, SignInUpDialogComponent, ServiceScreenDialogComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

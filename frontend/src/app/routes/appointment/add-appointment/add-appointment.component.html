@@ -95,10 +95,6 @@
                                     <td mat-header-cell *matHeaderCellDef class="text-center">Price</td>
                                     <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.price }}</td>
                                 </ng-container>
-                                <ng-container matColumnDef="disc" sticky>
-                                    <td mat-header-cell *matHeaderCellDef class="text-center">Disc.</td>
-                                    <td mat-cell *matCellDef="let element" class="p-0 text-center">{{ element.disc }}</td>
-                                </ng-container>
                                 <tr mat-header-row *matHeaderRowDef="displayedListColumns"></tr>
                                 <tr mat-row *matRowDef="let row; columns: displayedListColumns"></tr>
                             </table>
@@ -106,13 +102,9 @@
                         <div class="col-md-12 d-flex bg-gray-400">
                             <div class="col-md-8">
                                 <p>Subtotal</p>
-                                <p>Ticket discount</p>
-                                <p>Subtotal</p>
                             </div>
                             <div class="col-md-4">
                                 <p>200$</p>
-                                <p>40$</p>
-                                <p>160$</p>
                             </div>
                         </div>
                     </div>

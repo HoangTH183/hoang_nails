@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\Appointment\AppointmentEloquentRepository;
+use App\Repositories\Appointment\AppointmentRepositoryInterface;
 use App\Repositories\Customer\CustomerEloquentRepository;
 use App\Repositories\Customer\CustomerRepositoryInterface;
 use App\Repositories\CustomerGroup\CustomerGroupEloquentRepository;
@@ -18,6 +20,8 @@ use App\Repositories\Service\ServiceEloquentRepository;
 use App\Repositories\Service\ServiceRepositoryInterface;
 use App\Repositories\ServiceCategory\ServiceCategoryEloquentRepository;
 use App\Repositories\ServiceCategory\ServiceCategoryRepositoryInterface;
+use App\Repositories\Ticket\TicketEloquentRepository;
+use App\Repositories\Ticket\TicketRepositoryInterface;
 use App\Repositories\User\UserEloquentRepository;
 use App\Repositories\User\UserRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
@@ -91,6 +95,16 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(
             ProductRepositoryInterface::class,
             ProductEloquentRepository::class
+        );
+
+        $this->app->singleton(
+            TicketRepositoryInterface::class,
+            TicketEloquentRepository::class
+        );
+
+        $this->app->singleton(
+            AppointmentRepositoryInterface::class,
+            AppointmentEloquentRepository::class
         );
 
 

@@ -1,6 +1,6 @@
 .discount__ticket {
   width: 1000px;
-  height: 400px;
+  height: 325px;
 }
 
 .discount__ticket-header {
@@ -9,35 +9,43 @@
   justify-content: space-between;
   background-color: #43a047;
   color: #fff;
+  position: absolute;
+  width: 52.07%;
+  margin-left: -24px;
+  margin-top: -24px;
+  margin-bottom: 50px;
+  border-radius: 0px !important;
 }
- .discount__ticket-item {
-   display: flex;
-   margin-left: 80px;
-   width: 610px;
-   justify-content: space-between;
- }
- .discount__ticket-content {
-   margin:50px 0 50px 80px;
- }
+.discount__ticket-item {
+  display: flex;
+  margin-top: 110px;
+  margin-left: 100px;
+  width: 770px;
+  justify-content: space-between;
+}
+.discount__ticket-content {
+  margin: 50px 0 50px 80px;
+}
 
- .ticket-content__button-1 {
+.ticket-content__button-1 {
   margin-left: 220px;
- }
+}
 
- .ticket-item__input {
-   width: 250px;
-   height: 50px;
- }
+.ticket-item__input {
+  width: 330px;
+  height: 50px;
+}
 
- .ticket-item__form {
-   height: 50px;
- }
+.ticket-item__form {
+  height: 50px;
+  width: 300px;
+}
 
- .discount-ticket__actions {
+.discount-ticket__actions {
   margin-top: 65px;
   float: right;
- }
+}
 
- .discount-ticket__actions button {
-   margin-left: 15px;
- }
+.discount-ticket__actions button {
+  margin-left: 15px;
+}

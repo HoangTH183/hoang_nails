@@ -44,6 +44,8 @@ Route::group(['prefix' => '/'], function () {
         Route::apiResource('services', \App\Http\Controllers\Api\Company\ServiceController::class);
         Route::apiResource('product-categories', \App\Http\Controllers\Api\Company\ProductCategoryController::class);
         Route::apiResource('products', \App\Http\Controllers\Api\Company\ProductController::class);
+        Route::apiResource('tickets', \App\Http\Controllers\Api\Company\TicketController::class);
+        Route::apiResource('appointments', \App\Http\Controllers\Api\Company\AppointmentController::class);
     });
 
 });

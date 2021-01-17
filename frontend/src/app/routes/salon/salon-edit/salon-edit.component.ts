@@ -39,8 +39,6 @@ export class SalonEditComponent implements OnInit {
       phone:[null, [Validators.required]],
       address: [null, [Validators.required]],
       selected: [null, [Validators.required]],
-      fb_link: [null, [Validators.required]],
-      ig_link: [null, [Validators.required]],
       opening_hour: [null, [Validators.required]],
       closing_hour: [null, [Validators.required]],
     });

@@ -1,0 +1,65 @@
+<mat-card class="adddiscount__header">
+    <h3 mat-dialog-title>Add Service Discounts</h3>
+    <button mat-icon-button mat-dialog-close class="adddiscount-button__header"><mat-icon>highlight_off</mat-icon></button>
+</mat-card>
+<form>
+    <div class="discount__container">
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <mat-grid-list cols="5" rowHeight="1:0.25" gutterSize="2px" class="w-full">
+                    <mat-grid-tile class="bg-gray-200">No.</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">Service Name</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200 text-right">Price</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200 text-left">Disc.</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">Discount by Employee</mat-grid-tile>
+
+                    <mat-grid-tile class="bg-gray-200" colspan="4">
+                        <p class="employee__name">Employee 1</p>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200"></mat-grid-tile>
+
+                    <mat-grid-tile class="bg-gray-200">1</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200 text-left">Service 1</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">10$</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200"><input matInput type="text" class="w-80" placeholder="Discount price"></mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">
+                        <mat-radio-group>
+                            <mat-radio-button value=""></mat-radio-button>
+                        </mat-radio-group>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile class="bg-gray-200" colspan="4">
+                        <p class="employee__name">Employee 2</p>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200"></mat-grid-tile>
+
+                    <mat-grid-tile class="bg-gray-200">2</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200 text-left">Service 2</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">10$</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200"><input matInput type="text" class="w-80" placeholder="Discount price"></mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">
+                        <mat-radio-group>
+                            <mat-radio-button value=""></mat-radio-button>
+                        </mat-radio-group>
+                    </mat-grid-tile>
+
+                    <mat-grid-tile class="bg-gray-200">3</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200 text-left">Service 3</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">10$</mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200"><input matInput type="text" class="w-80" placeholder="Discount price"></mat-grid-tile>
+                    <mat-grid-tile class="bg-gray-200">
+                        <mat-radio-group>
+                            <mat-radio-button value=""></mat-radio-button>
+                        </mat-radio-group>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+            <div class="col-md-12 m-t-24">
+                <div class="adddiscount__button">
+                    <button mat-raised-button class="m-r-16" color="primary">Save</button>
+                    <button mat-raised-button mat-dialog-close>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

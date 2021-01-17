@@ -1,0 +1,38 @@
+.adddiscount__button {
+    float: right;
+}
+
+.adddiscount__title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 0px !important;
+}
+
+.discount__container {
+    width: 899px;
+}
+
+.employee__name {
+    position: absolute;
+    left: 3rem;
+}
+
+.adddiscount__header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #43a047;
+    color: #fff;
+    position: relative;
+    width: 105.3%;
+    margin-left: -24px;
+    margin-top: -24px;
+    margin-bottom: 50px;
+    border-radius: 0px !important;
+}
+
+.adddiscount-button__header {
+    position: absolute;
+    right: .5rem;
+    top: 20%;
+}

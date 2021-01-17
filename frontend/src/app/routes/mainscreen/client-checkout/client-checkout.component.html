@@ -78,30 +78,45 @@
       <mat-card-content>
         <div class="clientcheckout__card-content col-md-12">
           <div class="card-content">
-            <button class="card-content__button col-md-5" mat-raised-button color="primary">
-              Print invoice
+            <button
+              class="card-content__button col-md-5"
+              mat-raised-button
+              color="primary"
+              (click)="   adddiscountDialog()"
+            >
+              Item discount
             </button>
-            <button class="card-content__button col-md-5" mat-raised-button color="primary">
-              Show invoice
+            <button class="card-content__button col-md-5" mat-raised-button color="warn">
+              Delete ticket
             </button>
           </div>
           <div class="card-content">
-            <button class="card-content__button col-md-5" mat-raised-button color="primary" (click)="openDiscount() ">
-              Add discount
+            <button
+              class="card-content__button col-md-5"
+              mat-raised-button
+              color="primary"
+              (click)="openDiscount()"
+            >
+              Ticket discount
             </button>
-            <button class="card-content__button col-md-5" mat-raised-button color="primary">
+            <button
+              class="card-content__button col-md-5"
+              mat-raised-button
+              color="primary"
+              (click)="addtipDialog()"
+            >
               Add tip
             </button>
           </div>
         </div>
         <div>
-          <div class="example-container mat-elevation-z8">
+          <div class="example-container mat-elevation-z8 m-r-0">
             <table>
               <tr>
                 <th>No.</th>
                 <th>Name</th>
                 <th>Price</th>
-                <th >Disc</th>
+                <th>Disc</th>
                 <th></th>
               </tr>
               <tr>
@@ -113,8 +128,8 @@
                 <td>10$</td>
                 <td>1$</td>
                 <td class="button-btn__delete">
-                  <button mat-icon-button color="warn" >
-                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  <button mat-icon-button color="warn">
+                    <mat-icon class="button-btn__delete">delete_sweep</mat-icon>
                   </button>
                 </td>
               </tr>
@@ -127,8 +142,8 @@
                 <td>10$</td>
                 <td>1$</td>
                 <td class="button-btn__delete">
-                  <button mat-icon-button color="warn" >
-                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  <button mat-icon-button color="warn">
+                    <mat-icon class="button-btn__delete">delete_sweep</mat-icon>
                   </button>
                 </td>
               </tr>
@@ -138,8 +153,8 @@
                 <td>10$</td>
                 <td>1$</td>
                 <td class="button-btn__delete">
-                  <button mat-icon-button color="warn" >
-                    <mat-icon class="button-btn__delete">delete</mat-icon>
+                  <button mat-icon-button color="warn">
+                    <mat-icon class="button-btn__delete">delete_sweep</mat-icon>
                   </button>
                 </td>
               </tr>
@@ -160,7 +175,7 @@
             </div>
           </div>
           <div>
-            <textarea id="w3review" name="w3review" rows="6" cols="48"></textarea>
+            <textarea id="w3review" name="w3review" rows="6" cols="48" class="w-full"></textarea>
           </div>
         </div>
       </mat-card-content>

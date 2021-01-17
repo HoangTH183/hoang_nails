@@ -8,6 +8,7 @@ import {AfterViewInit} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { SalonService } from 'app/routes/services/salon.service';
 
 export interface UserData {
   id: number;
@@ -45,14 +46,21 @@ export class SalonListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private salonService: SalonService) {
     // Create 100 users
     const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
   }
-  ngOnInit(): void {
+
+  salons = [];
+
+  ngOnInit() {
+    this.salonService.getAllSalon().subscribe((data: any[])=>{
+      console.log(data);
+      this.salons = data;
+    })  
   }
 
   ngAfterViewInit() {

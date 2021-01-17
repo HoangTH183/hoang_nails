@@ -8,8 +8,20 @@ mat-grid-tile {
 }
 
 .processw__header-title {
-  display: flex;
+  float: right;
   justify-content: space-between;
+  margin-right: 50px;
+}
+.mat-tab-group label {
+  width: 200px !important;
+}
+
+.mat-tab label {
+  width: 200px !important;
+}
+
+.mat-tab-label {
+  width: 200px;
 }
 
 .mat-sidenav-container {

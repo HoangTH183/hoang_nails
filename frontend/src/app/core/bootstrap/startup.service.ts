@@ -31,14 +31,14 @@ export class StartupService {
             this.menu.recursMenuForTranslation(res.menu, 'menu');
             this.menu.set(res.menu);
 
-            // Refresh user info
-            // In a real app, user data will be fetched from API
-            this.settings.setUser({
-              id: 1,
-              name: 'Nailsystem',
-              email: 'ns123@abc.com',
-              avatar: './assets/images/avatar.jpg',
-            });
+            // // Refresh user info
+            // // In a real app, user data will be fetched from API
+            // this.settings.setUser({
+            //   id: 1,
+            //   name: 'Nailsystem',
+            //   email: 'ns123@abc.com',
+            //   avatar: './assets/images/avatar.jpg',
+            // });
           },
           () => reject(),
           () => resolve(null)

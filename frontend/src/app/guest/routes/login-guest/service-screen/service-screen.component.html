@@ -1,0 +1,41 @@
+<mat-card class="example-card">
+    <div class="service__screen-header">
+        <mat-card-title class="service__screen-title">What services would you like to get done today?</mat-card-title>
+    </div>
+    <div class="service__screen-content">
+        <form [formGroup]="guestForm" class="example-form">
+            <div class="col-md-12">
+                <p>1) Select your services</p>
+                <div class="col-md-12 d-flex m-b-16">
+                    <div class="col-md-4">
+                        <button mat-raised-button class="bg-blue-200 f-s-20 col-md-12 p-t-8 p-b-8">Service group 1</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button mat-raised-button class="bg-gray-200 f-s-20 col-md-12 p-t-8 p-b-8">Service group 2</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button mat-raised-button class="bg-blue-200 f-s-20 col-md-12 p-t-8 p-b-8">Service group 3</button>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex">
+                    <div class="col-md-4">
+                        <button mat-raised-button class="bg-gray-200 f-s-20 col-md-12 p-t-8 p-b-8">Service group 4</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button mat-raised-button class="bg-blue-200 f-s-20 col-md-12 p-t-8 p-b-8">Service group 5</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p>2) Do you have an appointments</p>
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button value="1" class="col-md-6">Yes</mat-radio-button>
+                    <mat-radio-button value="2" class="col-md-6">No</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="service__screen-submit">
+                <button mat-raised-button color="primary" (click)="openDialog()" class="service__screen-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</mat-card>

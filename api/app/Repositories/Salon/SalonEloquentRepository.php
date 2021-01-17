@@ -70,7 +70,7 @@ class SalonEloquentRepository extends EloquentRepository implements SalonReposit
             $salon->employees()->create([
                 'full_name' => $attributes['name'],
                 'email' => $attributes['email'],
-                'password' => $attributes['password'],
+                'password' => bcrypt($attributes['password']),
                 'username' => $attributes['username'],
                 'role_id' => 1,
                 'address' => $attributes['address'],

@@ -82,6 +82,7 @@ abstract class EloquentRepository implements RepositoryInterface
     public function update($id, array $attributes)
     {
         $result = $this->find($id);
+
         if ($result) {
             $result->update($attributes);
 

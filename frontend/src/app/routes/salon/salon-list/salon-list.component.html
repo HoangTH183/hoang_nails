@@ -15,6 +15,23 @@
     </div>
 </div>
 
+<div style="padding: 13px;">
+    <mat-spinner *ngIf="salons.length === 0"></mat-spinner>
+
+    <mat-card *ngFor="let salon of salons" style="margin-top:11px;">
+        <mat-card-header>
+            <mat-card-title>{{salon.name}}</mat-card-title>
+            <mat-card-subtitle>{{salon.address}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{salon.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
+
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
 

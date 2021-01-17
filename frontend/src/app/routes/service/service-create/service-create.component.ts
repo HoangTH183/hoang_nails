@@ -5,6 +5,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 interface Salon {
 	name: string;
 }
+
+interface Category {
+	name: string;
+}
 @Component({
   selector: 'app-service-create',
   templateUrl: './service-create.component.html'
@@ -19,6 +23,16 @@ export class ServiceCreateComponent implements OnInit {
 		{name: 'Salon 5'},
 		{name: 'Salon 6'},
 		{name: 'Salon 7'}
+  ];
+  
+  category: Category[] = [
+		{name: 'Category 1'},
+		{name: 'Category 2'},
+		{name: 'Category 3'},
+		{name: 'Category 4'},
+		{name: 'Category 5'},
+		{name: 'Category 6'},
+		{name: 'Category 7'}
 	];
 
    customerGroupForm: FormGroup;
@@ -30,7 +44,11 @@ export class ServiceCreateComponent implements OnInit {
   ngOnInit(): void {
       this.customerGroupForm = this.customerGroupFB.group({		
       salon:[null, [Validators.required]],
-      name:[null, [Validators.required]]
+      category:[null, [Validators.required]],
+      estimatetime:[null, [Validators.required]],
+      name:[null, [Validators.required]],
+      price:[null, [Validators.required]],
+      tax:[null, [Validators.required]],
     });
   }
 }

@@ -1,0 +1,29 @@
+.addtip__button {
+    float: right;
+}
+
+.addtip__title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 0px !important;
+}
+
+.addtip__header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    background-color: #43a047;
+    color: #fff;
+    position: relative;
+    width: 114%;
+    margin-left: -24px;
+    margin-top: -24px;
+    margin-bottom: 50px;
+    border-radius: 0px !important;
+}
+
+.addtip-button__header {
+    position: absolute;
+    right: .5rem;
+    top: 20%;
+}

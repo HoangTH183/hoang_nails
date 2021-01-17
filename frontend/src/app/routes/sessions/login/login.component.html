@@ -5,18 +5,18 @@
         <form class="form-field-full" [formGroup]="loginForm">
 
             <mat-form-field appearance="outline">
-                <mat-label>{{'login.username' | translate}}: Nailsystem</mat-label>
-                <input matInput placeholder="Nailsystem" formControlName="username" required>
+                <mat-label>{{'login.username' | translate}}</mat-label>
+                <input matInput placeholder="Username" formControlName="username" required>
                 <mat-error *ngIf="username.invalid">
-                    {{'login.please_enter' | translate}} <strong>Nailsystem</strong>
+                    {{'login.please_enter' | translate}}
                 </mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-                <mat-label>{{'login.password' | translate}}: Nailsystem</mat-label>
-                <input matInput placeholder="Nailsystem" type="password" formControlName="password" required>
+                <mat-label>{{'login.password' | translate}}</mat-label>
+                <input matInput placeholder="Password" type="password" formControlName="password" required>
                 <mat-error *ngIf="password.invalid">
-                    {{'login.please_enter' | translate}} <strong>Nailsystem</strong>
+                    {{'login.please_enter' | translate}}
                 </mat-error>
             </mat-form-field>
 

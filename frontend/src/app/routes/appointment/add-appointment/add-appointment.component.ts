@@ -110,7 +110,7 @@ export class AddAppointmentComponent implements OnInit {
 
   displayedColumns: string[] = ['label', 'data'];
 
-  displayedListColumns: string[] = ['no', 'name', 'price', 'disc'];
+  displayedListColumns: string[] = ['no', 'name', 'price'];
 
   dataSource = ELEMENT_DATA;
 

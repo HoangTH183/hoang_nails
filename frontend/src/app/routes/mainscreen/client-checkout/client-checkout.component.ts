@@ -1,6 +1,8 @@
 import { DiscountTicketComponent } from './discount-ticket/discount-ticket.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AddDiscountComponent } from '../add-discount/add-discount.component';
+import { AddTipComponent } from '../add-tip/add-tip.component';
 
 const ELEMENT_DATA: PeriodicElement[] = [
   { no: 1, name: 'Hydrogen', price: 1.0079, disc: 'H' },
@@ -25,6 +27,15 @@ export class ClientCheckoutComponent implements OnInit {
 
   openDiscount(){
     this.dialog.open(DiscountTicketComponent)
+  }
+
+  
+  addtipDialog(){
+    this.dialog.open(AddTipComponent)
+  }
+
+  adddiscountDialog(){
+    this.dialog.open(AddDiscountComponent)
   }
 
   constructor(public dialog: MatDialog) {}

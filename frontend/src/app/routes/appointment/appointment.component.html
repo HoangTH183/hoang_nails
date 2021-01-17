@@ -63,6 +63,7 @@
     <mat-grid-list cols="6" rowHeight="1:0.25" gutterSize="2px">
         <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.color]="tile.color" [style.background]="tile.background">
             {{tile.text}}
+            <mat-icon class="appointment__icon"><a (click)="appointmentDialog()">{{tile.icon}}</a></mat-icon>
         </mat-grid-tile>
     </mat-grid-list>
 </div>
